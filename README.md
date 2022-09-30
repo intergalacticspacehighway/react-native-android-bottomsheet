@@ -1,6 +1,4 @@
-# Native android bottomsheet
-
-## WIP
+# Native android bottomsheet (WIP)
 
 ## To run example
 - Clone the repo
