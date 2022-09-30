@@ -16,6 +16,8 @@ import com.facebook.react.uimanager.events.EventDispatcher
 import com.facebook.react.views.view.ReactViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
+// This source is based on React Native's Modal component 
+// https://github.com/facebook/react-native/blob/f1645560376b734a87f0eba1fef69f6cba312cc1/ReactAndroid/src/main/java/com/facebook/react/views/modal/ReactModalHostView.java
 
 class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManager {
   lateinit var mHostView: BottomSheetViewGroup;
