@@ -1,7 +1,6 @@
 package com.reactnativeandroidbottomsheet
 
 import android.content.Context
-import android.graphics.Color
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +14,7 @@ import com.facebook.react.uimanager.events.Event
 import com.facebook.react.uimanager.events.EventDispatcher
 import com.facebook.react.views.view.ReactViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialog
+
 
 // This source is based on React Native's Modal component
 // https://github.com/facebook/react-native/blob/f1645560376b734a87f0eba1fef69f6cba312cc1/ReactAndroid/src/main/java/com/facebook/react/views/modal/ReactModalHostView.java
@@ -70,7 +70,11 @@ class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManag
     // TODO: export a prop for this
     // We make background transparent and let styles be handled with a React native view. (useful for setting rounded border radius)
 //    (frameLayout.getParent() as View).setBackgroundColor(Color.TRANSPARENT)
-    bottomSheetDialog?.show();
+
+  // Todo:  color/backdrop changes
+  //    val cd = ColorDrawable(-0x43ff6433)
+//    bottomSheetDialog?.window?.setDimAmount(0.2f)
+//    bottomSheetDialog?.show();
   }
 
   fun isVisible(): Boolean? {
