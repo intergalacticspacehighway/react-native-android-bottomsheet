@@ -32,7 +32,7 @@ export default function App() {
       <BottomSheet peekHeight={400} maxHeight={1000} aria-label="Edit your profile"  visible={visible1} onDismiss={() => {
         setVisible1(false);
       }}>
-        <View style={{flex: 1, alignItems:'center',  padding: 10, borderTopRightRadius: 20, borderTopLeftRadius: 20, backgroundColor:"white"}}>
+        <View style={{flex: 1}}>
           <Text>Hello from bottomsheet</Text>
           </View>
       </BottomSheet>

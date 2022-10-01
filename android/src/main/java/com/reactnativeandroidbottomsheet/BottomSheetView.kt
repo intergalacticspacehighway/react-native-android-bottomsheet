@@ -67,8 +67,9 @@ class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManag
     frameLayout.fitsSystemWindows = true
     bottomSheetDialog?.behavior?.isFitToContents = true
     bottomSheetDialog?.setContentView(frameLayout);
+    // TODO: export a prop for this
     // We make background transparent and let styles be handled with a React native view. (useful for setting rounded border radius)
-    (frameLayout.getParent() as View).setBackgroundColor(Color.TRANSPARENT)
+//    (frameLayout.getParent() as View).setBackgroundColor(Color.TRANSPARENT)
     bottomSheetDialog?.show();
   }
 
