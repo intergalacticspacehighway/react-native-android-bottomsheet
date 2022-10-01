@@ -16,7 +16,7 @@ import com.facebook.react.uimanager.events.EventDispatcher
 import com.facebook.react.views.view.ReactViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
-// This source is based on React Native's Modal component 
+// This source is based on React Native's Modal component
 // https://github.com/facebook/react-native/blob/f1645560376b734a87f0eba1fef69f6cba312cc1/ReactAndroid/src/main/java/com/facebook/react/views/modal/ReactModalHostView.java
 
 class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManager {
@@ -92,6 +92,10 @@ class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManag
 
   fun setBottomSheetMaxHeight(maxHeight: Int) {
     bottomSheetDialog?.behavior?.maxHeight = maxHeight;
+  }
+
+  fun setAriaLabel(title: String) {
+    bottomSheetDialog?.setTitle(title)
   }
 
   override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {

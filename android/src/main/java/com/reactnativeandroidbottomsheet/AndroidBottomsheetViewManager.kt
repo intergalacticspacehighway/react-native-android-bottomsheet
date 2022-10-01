@@ -31,6 +31,11 @@ class AndroidBottomsheetViewManager : ViewGroupManager<BottomSheetView>() {
       view.setBottomSheetPeekHeight(peekHeight)
   }
 
+  @ReactProp(name = "aria-label")
+  fun setAriaLabel(view: BottomSheetView, title: String) {
+    view.setAriaLabel(title)
+  }
+
   @ReactProp(name = "maxHeight")
   fun setMaxHeight(view: BottomSheetView, maxHeight: Int) {
     view.setBottomSheetMaxHeight(maxHeight)
