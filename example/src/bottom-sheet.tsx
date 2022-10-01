@@ -8,6 +8,7 @@ type BottomSheetProps = {
     peekHeight: number
     maxHeight: number;
     children: React.ReactNode;
+    "aria-label": string
 }
 
 export const BottomSheet = (props: BottomSheetProps) => {

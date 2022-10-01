@@ -42,6 +42,11 @@ class AndroidBottomsheetViewManager : ViewGroupManager<BottomSheetView>() {
   }
 
 
+  @ReactProp(name = "minHeight")
+  fun setMinHeight(view: BottomSheetView, maxHeight: Int) {
+    view.setBottomSheetMaxHeight(maxHeight)
+  }
+
   override fun addEventEmitters(reactContext: ThemedReactContext, view: BottomSheetView) {
     val dispatcher = UIManagerHelper.getEventDispatcher(reactContext, view.id);
     if (dispatcher != null) {

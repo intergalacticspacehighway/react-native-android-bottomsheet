@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {  View , ScrollView, Button,TextInput } from 'react-native';
+import {  View , ScrollView,Text, Button,TextInput } from 'react-native';
 import { BottomSheet } from './bottom-sheet';
 
 
@@ -29,10 +29,12 @@ export default function App() {
         <Button title="multiple bottomsheet" onPress={() => setVisible4(!visible4)} />
       </View>
 
-      <BottomSheet peekHeight={400} aria-label="Edit your profile"  visible={visible1} onDismiss={() => {
+      <BottomSheet peekHeight={400} maxHeight={600} aria-label="Edit your profile"  visible={visible1} onDismiss={() => {
         setVisible1(false);
       }}>
-        <View style={{flex: 1}} />
+        <View style={{flex: 1, justifyContent:"center", alignItems:"center"}}>
+          <Text>Hello from bottomsheet</Text>
+        </View>
       </BottomSheet>
 
       
@@ -48,7 +50,7 @@ export default function App() {
       <BottomSheet aria-label="Edit your profile"  visible={visible3} onDismiss={() => {
         setVisible3(false);
       }}>
-        <TextInput placeholder="hello world"  style={{width: 100, height: 100, marginTop: 400}} />
+        <TextInput placeholder="Enter name"  style={{width: "100%", height: 80, marginTop: 400, borderWidth: 2}} />
           <View style={{width: "100%", height: 10000, backgroundColor:"black"}} />
       </BottomSheet>
 
