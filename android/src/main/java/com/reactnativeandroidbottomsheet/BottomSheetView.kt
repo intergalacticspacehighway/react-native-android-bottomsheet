@@ -65,16 +65,16 @@ class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManag
     val frameLayout = FrameLayout(context)
     frameLayout.addView(mHostView)
     frameLayout.fitsSystemWindows = true
-    bottomSheetDialog?.behavior?.isFitToContents = true
     bottomSheetDialog?.setContentView(frameLayout);
     // TODO: export a prop for this
     // We make background transparent and let styles be handled with a React native view. (useful for setting rounded border radius)
 //    (frameLayout.getParent() as View).setBackgroundColor(Color.TRANSPARENT)
+    // bottomSheetDialog?.dismissWithAnimation = true;
 
   // Todo:  color/backdrop changes
   //    val cd = ColorDrawable(-0x43ff6433)
 //    bottomSheetDialog?.window?.setDimAmount(0.2f)
-//    bottomSheetDialog?.show();
+    bottomSheetDialog?.show();
   }
 
   fun isVisible(): Boolean? {
