@@ -29,12 +29,12 @@ export default function App() {
         <Button title="multiple bottomsheet" onPress={() => setVisible4(!visible4)} />
       </View>
 
-      <BottomSheet peekHeight={400} maxHeight={600} aria-label="Edit your profile"  visible={visible1} onDismiss={() => {
+      <BottomSheet peekHeight={400} maxHeight={1000} aria-label="Edit your profile"  visible={visible1} onDismiss={() => {
         setVisible1(false);
       }}>
-        <View style={{flex: 1, justifyContent:"center", alignItems:"center"}}>
+        <View style={{flex: 1, alignItems:'center',  padding: 10, borderTopRightRadius: 20, borderTopLeftRadius: 20, backgroundColor:"white"}}>
           <Text>Hello from bottomsheet</Text>
-        </View>
+          </View>
       </BottomSheet>
 
       

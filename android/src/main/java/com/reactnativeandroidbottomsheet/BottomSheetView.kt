@@ -1,10 +1,10 @@
 package com.reactnativeandroidbottomsheet
 
 import android.content.Context
+import android.graphics.Color
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.view.accessibility.AccessibilityEvent
 import android.widget.FrameLayout
 import androidx.annotation.Nullable
@@ -67,6 +67,8 @@ class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManag
     frameLayout.fitsSystemWindows = true
     bottomSheetDialog?.behavior?.isFitToContents = true
     bottomSheetDialog?.setContentView(frameLayout);
+    // We make background transparent and let styles be handled with a React native view. (useful for setting rounded border radius)
+    (frameLayout.getParent() as View).setBackgroundColor(Color.TRANSPARENT)
     bottomSheetDialog?.show();
   }
 
