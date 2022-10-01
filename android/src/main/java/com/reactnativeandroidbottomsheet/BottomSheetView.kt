@@ -20,7 +20,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 // https://github.com/facebook/react-native/blob/f1645560376b734a87f0eba1fef69f6cba312cc1/ReactAndroid/src/main/java/com/facebook/react/views/modal/ReactModalHostView.java
 
 class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManager {
-  lateinit var mHostView: BottomSheetViewGroup;
+  var mHostView: BottomSheetViewGroup;
   @Nullable
   private var bottomSheetDialog: BottomSheetDialog? = null;
 
@@ -32,7 +32,7 @@ class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManag
 
   override fun addView(child: View?, index: Int) {
     UiThreadUtil.assertOnUiThread()
-      mHostView.addView(child)
+    mHostView.addView(child)
   }
 
 
@@ -69,7 +69,7 @@ class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManag
     // TODO: export a prop for this
     // We make background transparent and let styles be handled with a React native view. (useful for setting rounded border radius)
 //    (frameLayout.getParent() as View).setBackgroundColor(Color.TRANSPARENT)
-    // bottomSheetDialog?.dismissWithAnimation = true;
+    //  bottomSheetDialog?.dismissWithAnimation = true;
 
   // Todo:  color/backdrop changes
   //    val cd = ColorDrawable(-0x43ff6433)

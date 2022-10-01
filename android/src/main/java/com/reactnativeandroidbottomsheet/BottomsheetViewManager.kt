@@ -9,7 +9,7 @@ import com.facebook.react.uimanager.annotations.ReactProp
 
 //import com.google.android.material.bottomsheet.BottomSheetDialog
 
-class AndroidBottomsheetViewManager : ViewGroupManager<BottomSheetView>() {
+class BottomsheetViewManager : ViewGroupManager<BottomSheetView>() {
   override fun getName() = "AndroidBottomsheetView"
   override fun createViewInstance(reactContext: ThemedReactContext): BottomSheetView {
     return BottomSheetView(reactContext)
