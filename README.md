@@ -2,7 +2,7 @@
 
 ## Why?
 
-- This library uses native Bottomsheet. Biggest wins are on accessibility. Styling can also be customised.
+This library uses native Bottomsheet. Biggest wins are on accessibility. Styling can also be customised.
 
 ## Installation
 
@@ -35,7 +35,7 @@ import { BottomSheet } from 'react-native-android-bottomsheet';
 </BottomSheet>;
 ```
 
-- BottomSheet has no background by default. So, setting backgroundColor on view is important.
+- BottomSheet has no background by default. So, setting `backgroundColor` on view is important.
 
 ### BottomSheet with ScrollView
 
@@ -55,9 +55,9 @@ import { BottomSheet } from 'react-native-android-bottomsheet';
 </BottomSheet>;
 ```
 
-- To make sure drag to close/expand gesture works, make sure to add nestedScrollEnabled to the ScrollView
+- For drag-to-close/expand gesture to work, make sure to add `nestedScrollEnabled` to the ScrollView
 
-### BottomSheet with ScrollView and Pull to refresh
+### BottomSheet with ScrollView and pull to refresh
 
 ```jsx
 import { ScrollView, RefreshControl } from 'react-native';
@@ -87,8 +87,6 @@ import { BottomSheet } from 'react-native-android-bottomsheet';
   </ScrollView>
 </BottomSheet>;
 ```
-
-- To make sure drag to close/expand gesture works, make sure to add nestedScrollEnabled to the ScrollView
 
 ## Props
 
