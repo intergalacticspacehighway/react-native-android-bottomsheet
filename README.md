@@ -105,10 +105,10 @@ type AndroidBottomsheetProps = {
   // Collapsed bottomsheet height
   'peekHeight'?: number;
 
-  // Expanded bottomsheet height
+  // Expanded bottomsheet height. Defaults to window height.
   'maxHeight'?: number;
 
-  // Gets announced when bottomsheet is opened with TalkBack
+  // Gets announced when bottomsheet is opened with TalkBack enabled
   'aria-label'?: string;
 
   // To set backdrop dim ammount. Accepts value 0 to 1. 0 would make the backdrop transparent.
@@ -124,3 +124,11 @@ type AndroidBottomsheetProps = {
 - Clone the repo
 - Go to example/
 - yarn && yarn android
+
+
+## Todo
+
+- Fabric support
+- Customisable entry/exit transition
+- Backdrop color
+
