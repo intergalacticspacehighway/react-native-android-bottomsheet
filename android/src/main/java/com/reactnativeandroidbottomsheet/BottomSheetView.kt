@@ -1,6 +1,7 @@
 package com.reactnativeandroidbottomsheet
 
 import android.content.Context
+import android.graphics.Color
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -23,7 +24,6 @@ class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManag
   var mHostView: BottomSheetViewGroup;
   @Nullable
   private var bottomSheetDialog: BottomSheetDialog? = null;
-
 
   constructor(context: Context) : super(context) {
       mHostView = BottomSheetViewGroup(context)
@@ -66,19 +66,24 @@ class BottomSheetView: ViewGroup, FabricViewStateManager.HasFabricViewStateManag
     frameLayout.addView(mHostView)
     frameLayout.fitsSystemWindows = true
     bottomSheetDialog?.setContentView(frameLayout);
-    // TODO: export a prop for this
-    // We make background transparent and let styles be handled with a React native view. (useful for setting rounded border radius)
-//    (frameLayout.getParent() as View).setBackgroundColor(Color.TRANSPARENT)
-    //  bottomSheetDialog?.dismissWithAnimation = true;
 
-  // Todo:  color/backdrop changes
-  //    val cd = ColorDrawable(-0x43ff6433)
-//    bottomSheetDialog?.window?.setDimAmount(0.2f)
+    // Keep it completely unstyled in v1
+    (frameLayout.parent as View).setBackgroundColor(Color.TRANSPARENT)
+
     bottomSheetDialog?.show();
   }
 
   fun isVisible(): Boolean? {
     return bottomSheetDialog?.isShowing
+  }
+
+  fun setBackdropDimAmount(dimAmount: Float) {
+    bottomSheetDialog?.window?.setDimAmount(dimAmount)
+  }
+
+
+  fun setCancelable(cancelable: Boolean) {
+    bottomSheetDialog?.setCancelable(cancelable)
   }
 
   fun hideBottomSheet() {
