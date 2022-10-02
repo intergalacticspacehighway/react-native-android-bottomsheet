@@ -7,6 +7,10 @@ This library uses native [BottomsheetDialog](https://developer.android.com/refer
 ## Installation
 
 ```
+// with npm
+npm i react-native-android-bottomsheet
+
+// or with yarn
 yarn add react-native-android-bottomsheet
 ```
 
