@@ -39,7 +39,7 @@ import { BottomSheet } from 'react-native-android-bottomsheet';
 </BottomSheet>;
 ```
 
-- BottomSheet has no background by default. So, setting `backgroundColor` on view is important.
+- BottomSheet has no background by default. So, setting `backgroundColor` on View is important.
 
 ### BottomSheet with ScrollView
 
