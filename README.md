@@ -2,7 +2,7 @@
 
 ## Why?
 
-This library uses native [BottomsheetDialog](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetDialog). Biggest wins are on accessibility without writing much custom code. Styling can also be customised.
+This library uses native [BottomsheetDialog](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetDialog). Biggest wins are on [accessibility](https://twitter.com/nishanbende/status/1576071962186899456) without writing much custom code. Styling can also be customised.
 
 ## Installation
 
