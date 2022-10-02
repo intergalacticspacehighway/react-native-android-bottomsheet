@@ -1,4 +1,4 @@
-# React Native Android Bottomsheet (alpha)
+# React Native Android Bottomsheet
 
 ## Why?
 
