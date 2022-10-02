@@ -1,15 +1,13 @@
 package com.reactnativeandroidbottomsheet
 import androidx.annotation.Nullable
-import com.facebook.react.bridge.ReactContext
 import com.facebook.react.common.MapBuilder
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 
-//import com.google.android.material.bottomsheet.BottomSheetDialog
 
-class AndroidBottomsheetViewManager : ViewGroupManager<BottomSheetView>() {
+class BottomsheetViewManager : ViewGroupManager<BottomSheetView>() {
   override fun getName() = "AndroidBottomsheetView"
   override fun createViewInstance(reactContext: ThemedReactContext): BottomSheetView {
     return BottomSheetView(reactContext)
@@ -31,6 +29,11 @@ class AndroidBottomsheetViewManager : ViewGroupManager<BottomSheetView>() {
       view.setBottomSheetPeekHeight(peekHeight)
   }
 
+  @ReactProp(name = "cancelable")
+  fun setCancelable(view: BottomSheetView, cancelable: Boolean) {
+    view.setCancelable(cancelable)
+  }
+
   @ReactProp(name = "aria-label")
   fun setAriaLabel(view: BottomSheetView, title: String) {
     view.setAriaLabel(title)
@@ -41,10 +44,9 @@ class AndroidBottomsheetViewManager : ViewGroupManager<BottomSheetView>() {
     view.setBottomSheetMaxHeight(maxHeight)
   }
 
-
-  @ReactProp(name = "minHeight")
-  fun setMinHeight(view: BottomSheetView, maxHeight: Int) {
-    view.setBottomSheetMaxHeight(maxHeight)
+  @ReactProp(name = "backdropDimAmount")
+  fun setBackdropDimAmount(view: BottomSheetView, dimAmount: Float) {
+    view.setBackdropDimAmount(dimAmount)
   }
 
   override fun addEventEmitters(reactContext: ThemedReactContext, view: BottomSheetView) {

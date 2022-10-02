@@ -11,6 +11,6 @@ class AndroidBottomsheetPackage : ReactPackage {
     }
 
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-        return listOf(AndroidBottomsheetViewManager())
+        return listOf(BottomsheetViewManager())
     }
 }
