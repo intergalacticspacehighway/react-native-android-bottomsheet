@@ -131,4 +131,5 @@ type AndroidBottomsheetProps = {
 - Fabric support
 - Customisable entry/exit transition
 - Backdrop color
+- Ability to remove Backdrop 
 
